@@ -1,6 +1,6 @@
 <?php
 
-$conn = new PDO('mysql:host=localhost;dbname=brief6', 'root', '');
+$conn = new PDO('mysql:host=localhost;dbname=brief7', 'root', '');
 
 
 
@@ -15,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     $stmt->execute([$name, $desc, $img]);
 
-    move_uploaded_file($_FILES['img']['tmp_name'], 'C:\xampp\htdocs\brief6\assets\catgImages\\' . $_FILES['img']['name']);
+    move_uploaded_file($_FILES['img']['tmp_name'], 'C:\xampp\htdocs\brief7\assets\catgImages\\' . $_FILES['img']['name']);
 
 }
 

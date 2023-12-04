@@ -2,7 +2,7 @@
 
 try {
 
-    $conn = new PDO('mysql:host=localhost;dbname=brief6', 'root', '');
+    $conn = new PDO('mysql:host=localhost;dbname=brief7', 'root', '');
 
 
     if ($_SERVER["REQUEST_METHOD"] === "POST") {

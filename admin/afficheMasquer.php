@@ -1,6 +1,6 @@
 <?php
 
-$conn = new PDO('mysql:host=localhost;dbname=brief6', 'root', '');
+$conn = new PDO('mysql:host=localhost;dbname=brief7', 'root', '');
 $stmt1 = $conn->prepare('SELECT * FROM products WHERE isHide = 1');
 $stmt1->execute();
 $products = $stmt1->fetchAll(PDO::FETCH_ASSOC);
