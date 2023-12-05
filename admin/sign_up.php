@@ -1,7 +1,7 @@
 <?php
 
 try {
-    $conn = new PDO("mysql:host=localhost;dbname=brief6", 'root', '');
+    $conn = new PDO("mysql:host=localhost;dbname=brief7", 'root', '');
     // $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $stmt = $conn->prepare("INSERT INTO users (email, username, pass, state, role) VALUES (:email, :username, :password, 0, 0)");
     if (isset($_POST["submit"])) {

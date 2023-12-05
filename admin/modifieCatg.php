@@ -1,6 +1,6 @@
 <?php
 
-$conn = new PDO('mysql:host=localhost;dbname=brief6', 'root', '');
+$conn = new PDO('mysql:host=localhost;dbname=brief7', 'root', '');
 $stmt = $conn->prepare('SELECT * FROM categories');
 $stmt->execute();
 $catg = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -21,7 +21,7 @@ if (isset($_POST["modifie"])) {
     $stmt = $conn->prepare($sql);
     $stmt->execute();
 
-    move_uploaded_file($_FILES['img']['tmp_name'], 'C:\xampp\htdocs\brief6\assets\catgImages\\' . $_FILES['img']['name']);
+    move_uploaded_file($_FILES['img']['tmp_name'], 'C:\xampp\htdocs\brief7\assets\catgImages\\' . $_FILES['img']['name']);
 
     header("Location: modifieCatg.php");
     exit;

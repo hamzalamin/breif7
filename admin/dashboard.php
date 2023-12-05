@@ -1,6 +1,6 @@
 <?php
 
-$conn = new PDO('mysql:host=localhost;dbname=brief6', 'root', '');
+$conn = new PDO('mysql:host=localhost;dbname=brief7', 'root', '');
 $stmt1 = $conn->prepare("SELECT * FROM categories");
 $stmt1->execute();
 $catgs = $stmt1->fetchAll(PDO::FETCH_ASSOC);
@@ -29,7 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     $stmt->execute([$title, $codeBar, $prixAchat, $prixFinal, $prixFinal, $desc, $qntMin, $qntStock, $img, $catg]);
 
-    move_uploaded_file($_FILES['img']['tmp_name'], 'C:\xampp\htdocs\brief6\assets\images\\' . $_FILES['img']['name']);
+    move_uploaded_file($_FILES['img']['tmp_name'], 'C:\xampp\htdocs\brief7\assets\images\\' . $_FILES['img']['name']);
 
 
 

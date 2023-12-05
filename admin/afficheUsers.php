@@ -1,6 +1,6 @@
 <?php
 
-$conn = new PDO('mysql:host=localhost;dbname=brief6', 'root', '');
+$conn = new PDO('mysql:host=localhost;dbname=brief7', 'root', '');
 $stmt = $conn->prepare("SELECT * FROM users");
 $stmt->execute();
 $users = $stmt->fetchAll(PDO::FETCH_ASSOC);

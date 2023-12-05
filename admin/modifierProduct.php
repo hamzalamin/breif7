@@ -1,6 +1,6 @@
 <?php
 
-$conn = new PDO('mysql:host=localhost;dbname=brief6', 'root', '');
+$conn = new PDO('mysql:host=localhost;dbname=brief7', 'root', '');
 $stmt1 = $conn->prepare('SELECT * FROM products');
 $stmt1->execute();
 $products = $stmt1->fetchAll(PDO::FETCH_ASSOC);
@@ -40,7 +40,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $catg = $_POST['catg'];
         $img = "assets/images/" . $_FILES['img']['name'];
 
-        move_uploaded_file($_FILES['img']['tmp_name'], 'C:\xampp\htdocs\brief6\assets\images\\' . $_FILES['img']['name']);
+        move_uploaded_file($_FILES['img']['tmp_name'], 'C:\xampp\htdocs\breif7\admin\assets\images\\' . $_FILES['img']['name']);
 
         $sql = "UPDATE `products` 
         SET `etiquette` = '$title', `descpt` = '$desc', `prixAchat` = '$prixAchat', `prixFinal` = '$prixFinal',
@@ -142,7 +142,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             </form>
 
             <?php
-            if ($_SERVER["REQUEST_METHOD"] === "POST") {
+            if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['hided'])) {
                 ?>
                 <div class="mb-3 d-flex justify-content-center">
                     <img class="my-5" src='<?php echo $productModifie['img'] ?>'>

@@ -1,6 +1,6 @@
 <?php
 
-$conn = new PDO('mysql:host=localhost;dbname=brief6', 'root', '');
+$conn = new PDO('mysql:host=localhost;dbname=brief7', 'root', '');
 $stmt = $conn->prepare("SELECT * FROM categories");
 $stmt->execute();
 $catgs = $stmt->fetchAll(PDO::FETCH_ASSOC);
